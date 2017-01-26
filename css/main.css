@@ -1,14 +1,91 @@
-a {
-  text-decoration: none;
+/**********************
+GENERAL
+**********************/
+
+body {
+  font-family: "Open Sans", sans-serif;
 }
 
-#logo {
-  margin: 0;
-  text-align: center;
+a {
+  text-decoration: none;
 }
 
 #wrapper {
   margin: 0 auto;
   max-width: 940px;
   padding: 0 5%;
+}
+
+/**********************
+HEADING
+**********************/
+
+#logo {
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Changa One", sans-serif;
+  font-size: 1.75em;
+  font-weight: normal;
+  line-height: 0.8em;
+  margin: 15px 0;
+}
+
+h2 {
+  font-size: 0.75em;
+  font-weight: normal;
+  margin: -5px 0 0;
+}
+
+/**********************
+NAVIGATION
+**********************/
+
+nav {
+  margin: 20px 0 0;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/**********************
+FOOTER
+**********************/
+
+footer {
+  color: #ccc;
+  font-size: 0.75em;
+  padding-top: 50px;
+  text-align: center;
+}
+
+/**********************
+COLOURS
+**********************/
+
+body {
+  background-color: white;
+  color: #999;
+}
+
+h1, h2 {
+  color: white;
+}
+
+header {
+    background-color: #6D7EB3;
+    border-color: #465A97;
+}
+
+nav {
+  background: #465A97;
+}
+
+nav a, nav a:visited {
+  color: white;
+}
+
+nav a.selected, nav a:hover {
+  color: #020920;
 }
