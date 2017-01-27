@@ -67,6 +67,10 @@ nav ul {
   padding: 0;
 }
 
+nav li {
+  float: left;
+}
+
 nav a {
   font-weight: 800;
   padding: 15px 10px;
@@ -112,6 +116,53 @@ PAGE: PORTFOLIO
   font-size: 0.75em;
   margin: 0;
   padding: 5%;
+}
+
+/**********************
+PAGE: ABOUT
+**********************/
+
+.profile-photo {
+  display: block;
+  max-width: 150px;
+  margin: 0 auto 30px;
+  border-radius: 100%;
+}
+
+h3 {
+  margin: 0 0 1em 0;
+}
+
+/**********************
+PAGE: CONTACT
+**********************/
+
+.contact-info {
+  font-size: 0.9em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-info a {
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  display: block;
+  margin: 0 0 10px;
+  min-height: 20px;
+  padding: 0 0 0 30px;
+}
+
+.contact-info li.phone a {
+  background-image: url("../img/phone.png");
+}
+
+.contact-info li.mail a {
+  background-image: url("../img/mail.png");
+}
+
+.contact-info li.twitter a {
+  background-image: url("../img/twitter.png");
 }
 
 /**********************
