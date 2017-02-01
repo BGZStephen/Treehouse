@@ -12,9 +12,11 @@ function getRandomNumber(upper) {
 // console.log(getRandomNumber);
 // document.write(getRandomNumber);
 
+// function to calculate the are of a square / rectangle
 function getArea(x, y, unit) {
   var area = x * y;
   return area + " " + unit;
 }
-
 document.write(getArea(4, 4, "sq ft"));
+
+// Create a Max() function
