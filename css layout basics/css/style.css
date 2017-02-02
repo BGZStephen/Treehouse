@@ -138,7 +138,7 @@ img {
   }
 
   .main-nav li {
-    float: right;
+    float: left;
   }
 
 
@@ -161,16 +161,6 @@ img {
     float: left;
   }
 
-	/* ---- Float clearfix ---- */
-
-	.clearfix::after {
-		content: " ";
-		display: table;
-		clear: both;
-	}
-
-}
-
 @media (min-width: 980px) {
 
   .name {
@@ -179,11 +169,6 @@ img {
 
   .main-nav {
     margin-right: 0;
-    padding-right: 0;
-  }
-
-  .col {
-    padding: 1.5em;
   }
 
   .primary {
@@ -197,5 +182,15 @@ img {
   .tertiary {
     width: 30%;
   }
+
+}
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
 
 }
