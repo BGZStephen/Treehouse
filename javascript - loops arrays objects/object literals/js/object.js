@@ -1,4 +1,4 @@
-// impleeobject
+// simple object
 
 var person = {
   name: "Stephen",
