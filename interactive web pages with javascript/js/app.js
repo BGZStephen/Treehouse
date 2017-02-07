@@ -26,6 +26,15 @@ var createNewTaskElement = function(taskString) {
   var editInput = document.createElement("input")
   var editButton = document.createElement("button")
   var deleteButton = document.createElement("button")
+
+  checkbox.type = "checkbox";
+  editInput.type = "text";
+  editButton.innerText = "Edit"
+  editButton.className = "edit"
+  deleteButton.innerText = "Delete"
+  deleteButton.className = "delete"
+  label.innerText = taskString;
+
   listItem.appendChild(checkbox);
   listItem.appendChild(label);
   listItem.appendChild(editInput);
@@ -36,7 +45,7 @@ var createNewTaskElement = function(taskString) {
 
 // add a new task
 var addTask = function() {
-  var listItem = createNewTaskElement("Some New Task");
+  var listItem = createNewTaskElement(taskInput.value);
   // append item to incomplete task holder
   incompleteTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted) // when new item created, bind task events to it
@@ -46,15 +55,19 @@ var addTask = function() {
 var editTask = function() {
   console.log("Edit task...")
   // when edit button is pressed
-  // if parent has class edit mode
-    // switch from edit mode
-    // make label text become input value
-  // else
-    // switch to edit mode
-    // input value becomes label text
+  var listItem = this.parentNode;
+  var editInput = listItem.querySelector("input[type='text']")
+  var label = listItem.querySelector("label")
+  var containsClass = listItem.classList.contains("editMode");
 
-  // toggle edit mode
-}
+  if(containsClass) {
+    label.innerText = editInput.value;
+  } else {
+    editInput.value = label.innerText;
+  }
+
+  listItem.classList.toggle("editMode");
+  }
 
 // delete an existing task
 var deleteTask = function() {
