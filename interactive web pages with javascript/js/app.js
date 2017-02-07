@@ -49,6 +49,7 @@ var addTask = function() {
   // append item to incomplete task holder
   incompleteTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted) // when new item created, bind task events to it
+  taskInput.value = "";
 }
 
 // edit an existing task
@@ -111,7 +112,7 @@ var bindTaskEvents = function(taskListItem, checkboxEventHandler) {
 }
 
 // set the click handler to the addtask button
-addButton.onclick = addTask;
+addButton.addEventListener("click", addTask)
 
 for (var i = 0; i< incompleteTasksHolder.children.length; i++) {
   bindTaskEvents(incompleteTasksHolder.children[i], taskCompleted);
