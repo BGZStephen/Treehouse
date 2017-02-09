@@ -4,10 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Video and Audio</title>
-
     <link rel="stylesheet" href="css/normalize.css">
     <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <script src="mejs/jquery.js"></script>
+    <script src="mejs/mediaelement-and-player.min.js"></script>
+    <link rel="stylesheet" href="mejs/mediaelementplayer.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="mejs/mejs-skins.css">
   </head>
   <body>
 
@@ -17,7 +20,7 @@
 
       <h2>Video Example</h2>
 
-      <video controls>
+      <video width="852" height="488" controls>
         <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.mp4" type="video/mp4">
         <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.ogg" type="video/ogg">
         <track label="English" kind="subtitles" srclang="en" src="bridge-captions.vtt" default>
@@ -30,6 +33,15 @@
       </audio>
 
     </div>
+    <script>
+      $("audio,video").mediaelementplayer({
+        success: function(player, node) {
+          $("#" + node.id + "-node").html("node: " + player.pluginType)
+        },
+        startLanguage: "en",
+        translationSelector: true
 
+      });
+    </script>
   </body>
 </html>
