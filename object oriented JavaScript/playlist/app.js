@@ -1,10 +1,13 @@
 var playlist = new Playlist();
 
-var hereComesTheSun = new Song("Here comes the sun", "The Beatles", "2:54")
-var walkingOnSunshine = new Song("Walking on sunshine", "Katrina and the waves", "3:43")
+var hereComesTheSun = new Song("Here comes the sun", "The Beatles", "2:54");
+var walkingOnSunshine = new Song("Walking on sunshine", "Katrina and the waves", "3:43");
+
+var manOfSteel = new Movie("Man of Steel", "2013", "2:23:00");
 
 playlist.add(hereComesTheSun);
 playlist.add(walkingOnSunshine);
+playlist.add(manOfSteel);
 
 var playlistElement = document.getElementById("playlist")
 

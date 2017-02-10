@@ -1,12 +1,12 @@
-function Song(title, artist, duration) {
-  var song = this;
-  Media.call(song, title, duration);
-  this.artist = artist;
+function Movie(title, year, duration) {
+  var movie = this;
+  Media.call(movie, title, duration);
+  this.year = year;
 }
 
-Song.prototype = Object.create(Media.prototype);
+Movie.prototype = Object.create(Media.prototype);
 
-Song.prototype.toHTML = function() { // function to build HTML output to build playlist
+Movie.prototype.toHTML = function() { // function to build HTML output to build playlist
   var htmlString = "<li";
   if(this.isPlaying) {
     htmlString += " class='current'";
@@ -14,7 +14,7 @@ Song.prototype.toHTML = function() { // function to build HTML output to build p
   htmlString += ">"
   htmlString += this.title;
   htmlString += " - "
-  htmlString += this.artist;
+  htmlString += this.year;
   htmlString += "<span class='duration'>"
   htmlString += this.duration;
   htmlString += "</span></li>"
